@@ -76,14 +76,24 @@ document.getElementById('imageURL').addEventListener('input', inputHandler);
 document.getElementById('imageURL').addEventListener('propertychange', inputHandler);
 
 function retrieveData(){
+    productList = [];
     document.getElementById('section').innerHTML = "";
     get(child(ref(db), 'products/all/')).then((snapshot)=>{
-        let prods=snapshot.val();
-        for(var p in prods){
-            (prods[p]).forEach((product)=>{
-                addSection(product);
-            });
+var getClassOf = Function.prototype.call.bind(Object.prototype.toString);
+        if (snapshot.exists()) { 
+          let prods=Object.values(snapshot.val());
+          for(var p in prods){
+              if (getClassOf(prods[p])=="object") {
+                  prods[p] = Object.values(prods[p]);
+              }
+              productList = productList.concat(Object.values(prods[p]));
+          }
         }
+
+
+        productList.forEach((product)=>{
+          addSection(product);
+        });
     });
 }
 
