@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Jim+Nightshade&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Style+Script&display=swap');
+
+:root{
+    --mbg: #0c0c0c;
+    --bg: #222831;
+    --fbg: #183D3D;
+    --fg: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--mbg);
+    display: flex;
+    color: var(--fg);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+#logo{
+    width: 150px;
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    margin: 20px 0;
+}
+
+.form-container input, select{
+    background: var(--mbg);
+    color: var(--fg);
+}
+
+.form-container {
+    background-color: var(--bg);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid var(--mbg);
+    border-radius: 4px;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.submit-btn {
+    background-color: green;
+    border: 1px solid green;
+    color: white;
+}
+
+.clear-btn{
+    background-color: var(--mbg);
+    border: 1px solid var(--mbg);
+    color: var(--fg);
+}
+.show-products-btn {
+    background-color: var(--mbg);
+    border: 1px solid var(--mbg);
+    color: var(--fg);
+}
+
+.clear-btn:hover,
+.show-products-btn:hover,
+.submit-btn:hover {
+    opacity: 0.9;
+}
+
+.logo {
+    display: block;
+    margin: 0 auto 20px;
+    width: 100px;
+    height: auto;
+}
+
+
+.sectionBlock {
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.sectionList {
+    width: 100%;
+    margin-top: 15px;
+    list-style: none;
+    display: flex;
+}
+
+.liItem {
+    width: 100%;
+    height: 100px;
+}
+
+.card {
+    width: 100%;
+    background-color: #000;
+    border-radius: 10px;
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    overflow-x: scroll;
+    align-items: center;
+}
+
+.image{
+    height: 100px;
+    aspect-ratio: 1/1;
+    border-radius: 15px;
+}
+
+.desc {
+    width: 100px;
+    color: gray;
+    font-size: 0.8rem;
+}
+
+.title{
+    font-family: 'Poppins', sans-serif;
+    color: var(--fg);
+}
+
+.price {
+    color: green;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    overflow:  hidden;
+}
+
+.add {
+    display: none;
+    width: 100%;
+    padding: 5px;
+    color: white;
+    background-color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.card:hover {
+    cursor: pointer;
+    background-color: lightgrey;
+}
+
+.add:hover{
+    background-color: darkgreen;
+}
+
+@media screen and (max-width: 800px){   
+    .container{
+        width: 100%;
+    }   
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flora Co. Products</title>
+    <link rel="icon" type="image/x-icon" href="./media/2.jpg">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <img src="https://via.placeholder.com/150" alt="Plant Logo" id='logo' class="logo">
+            <h2>FloraCo. Product</h2>
+
+            <div id="productForm">
+                <div class="form-group">
+                    <label for="category">Category</label>
+                    <select id="category" name="category">
+                        <option value="Plants">Plants</option>
+                        <option value="Trees">Trees</option>
+                        <option value="Seeds">Seeds</option>
+                        <option value="Pots">Pots</option>
+                        <option value="Vases">Vases</option>
+                        <option value="Soil">Soil</option>
+                        <option value="Fertilizers">Fertilizers</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="name">Name of Product</label>
+                    <input type="text" id="name" name="name" placeholder="e.g. Lotus" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="name">Name in Telugu</label>
+                    <input type="text" id="te" name="te" placeholder="e.g. (Kamalam|కమలం)" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <input type="text" id="description" name="description" placeholder="e.g. Flowering water plant used in Medicines etc ..." required>
+                </div>
+
+                <div class="form-group">
+                    <label for="imageURL">Image URL</label>
+                    <input type="text" id="imageURL" name="imageURL" placeholder="e.g. plantname.png" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="price">Price</label>
+                    <input type="number" step="1.00" id="price" name="price" value="00.00" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="type">Type | Material Used</label>
+                    <input type="text" id="type" name="type" placeholder="e.g. Natural | Artificial | Material Used for Items" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="dimensions">Dimensions (L*B*H)</label>
+                    <input type="text" id="dimensions" name="dimensions" placeholder="e.g. 50x50x50 mm" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="size">Size</label>
+                    <select id="size" name="size">
+                        <option value="No Size">No Size</option>
+                        <option value="Small">Small</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Large">Large</option>
+                        <option value="Extra Large">Extra Large</option>
+                    </select>
+                </div>
+
+                <div class="form-actions">
+                    <button id="add-product" type="submit" class="btn submit-btn">Add Product</button>
+                    <button type="button" id="clear-fields" class="btn clear-btn">Clear Fields</button>
+                    <button id="show-product" type="button" class="btn show-products-btn">Show Products</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="section" class="container">
+    </div>
+    <script src="./js/index.js" type="module"></script>
+</body>
+</html>
+
+
+
