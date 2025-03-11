@@ -124,7 +124,7 @@ function addProduct(id, name, te, description, image, price, type, dimens, size,
   if (image!="") {
     img.setAttribute("src", ""+image);
   }else{
-    img.setAttribute("src", "./media/1.jpg");
+    img.setAttribute("src", "./media/2.jpg");
   }
 
   const texts = document.createElement('div');
