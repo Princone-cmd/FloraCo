@@ -142,7 +142,7 @@ body {
 
 .card {
     width: 100%;
-    background-color: #fff;
+    background-color: var(--mbg);
     border-radius: 10px;
     display: flex;
     gap: 10px;
@@ -158,14 +158,14 @@ body {
 }
 
 .desc {
-    width: 100px;
+    width: 100%;
     color: gray;
     font-size: 0.8rem;
 }
 
 .title{
     font-family: 'Poppins', sans-serif;
-    color: var(--mbg);
+    color: var(--fg);
 }
 
 .price {
@@ -188,7 +188,6 @@ body {
 
 .card:hover {
     cursor: pointer;
-    background-color: lightgrey;
 }
 
 .add:hover{
