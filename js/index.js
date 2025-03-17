@@ -26,6 +26,7 @@ const inputHandler = function(e) {
 
 document.getElementById('clear-fields').addEventListener('click', function (event) {
     document.getElementById('name').value = "";
+    document.getElementById('sub').value = "";
     document.getElementById('te').value = "";
     document.getElementById('description').value = "";
     document.getElementById('imageURL').value = "";
@@ -46,6 +47,7 @@ document.getElementById('add-product').addEventListener('click', function (event
         const newProduct = {
             id: 'FCPS'+id.toString().padStart(5, "0"),
             name: document.getElementById('name').value,
+            sub: (""+document.getElementById('sub').value).toString().trim().toLowerCase(),
             te: document.getElementById('te').value,
             description: document.getElementById('description').value,
             imageURL: document.getElementById('imageURL').value,
@@ -106,13 +108,13 @@ function addSection(plant){
   const list = document.createElement("ul");
   list.setAttribute("class", "sectionList");
 
-  addProduct(plant['id'], plant['name'], plant['te'],  plant['description'],  plant['imageURL'], plant['price'],  plant['type'],  plant['dimensions'], plant['size'], list);
+  addProduct(plant['id'], plant['sub'], plant['name'], plant['te'],  plant['description'],  plant['imageURL'], plant['price'],  plant['type'],  plant['dimensions'], plant['size'], list);
 
   mySection.appendChild(list);
   sections.appendChild(mySection);
 };
 
-function addProduct(id, name, te, description, image, price, type, dimens, size, list) {
+function addProduct(id, sub, name, te, description, image, price, type, dimens, size, list) {
 
   const li = document.createElement('li');
   li.setAttribute("class", "liItem");
@@ -136,7 +138,7 @@ function addProduct(id, name, te, description, image, price, type, dimens, size,
 
   const desc = document.createElement('p');
   desc.setAttribute("class", "desc");
-  desc.innerHTML = "ID: "+id+"\n"+getText(description) + "\nSize:" +getText(size)+"\nDimensions: "+getText(dimens);
+  desc.innerHTML = "ID: "+id+"\nSub-Category: "+getText(sub)+"\n"+getText(description) + "\nSize:" +getText(size)+"\nDimensions: "+getText(dimens);
 
   const cost = document.createElement('h5');
   cost.setAttribute("class", "price");
